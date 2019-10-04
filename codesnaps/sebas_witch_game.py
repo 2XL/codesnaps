@@ -14,11 +14,11 @@ class Witch:
 
 class FireWitch(Witch):
     def __init__(self, name, level, fire_staff):
-        super().__init__(name, level)
+        super(self).__init__(name, level)
         self.fire_staff = fire_staff
 
     def witchcraft_attack(self):
-        base_attack = super().witchcraft_attack()
+        base_attack = super(self).witchcraft_attack()
         if self.fire_staff:
             print('Witchcraft is filling with fire!!!')
             return base_attack * 2
@@ -27,11 +27,11 @@ class FireWitch(Witch):
 
 class EvilWitch(Witch):
     def __init__(self, name, level, black_staff_level):
-        super().__init__(name, level)
+        super(self).__init__(name, level)
         self.black_staff_level = black_staff_level
 
     def witchcraft_attack(self):
-        base_attack = super().witchcraft_attack()
+        base_attack = super(self).witchcraft_attack()
         print('Witchcraftd with black  staff level {}!!'.format(self.black_staff_level))
         return base_attack * 2 * self.black_staff_level
 
